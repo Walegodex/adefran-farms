@@ -77,7 +77,7 @@ export default function Header() {
         </Link>
         
         {/* Desktop Nav Links */}
-        <nav className="hidden md:flex flex-row gap-4 md:gap-8 text-sm font-medium text-white/90 drop-shadow-md whitespace-nowrap shrink-0">
+        <nav className="hidden lg:flex flex-row gap-4 lg:gap-8 text-sm font-medium text-white/90 drop-shadow-md whitespace-nowrap shrink-0">
           <Link href="/#home" className={`transition-colors duration-200 ${isMounted && activeSection === 'home' ? 'text-farm-primary' : 'hover:text-farm-primary'}`}>Home</Link>
           <Link href="/#about" className={`transition-colors duration-200 ${isMounted && activeSection === 'about' ? 'text-farm-primary' : 'hover:text-farm-primary'}`}>About</Link>
           <Link href="/#products" className={`transition-colors duration-200 ${isMounted && activeSection === 'products' ? 'text-farm-primary' : 'hover:text-farm-primary'}`}>Products</Link>
@@ -106,7 +106,7 @@ export default function Header() {
           </button>
 
           {/* User Profile / Auth Buttons (Desktop) */}
-          <div className="hidden md:block">
+          <div className="hidden lg:block">
             {user ? (
               <div className="relative">
                 <button 
@@ -168,7 +168,7 @@ export default function Header() {
           <button 
             type="button" 
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:text-farm-primary hover:bg-white/10 transition-colors focus:outline-none"
+            className="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-white hover:text-farm-primary hover:bg-white/10 transition-colors focus:outline-none"
             aria-label="Toggle Mobile Menu"
           >
             <svg 
@@ -190,7 +190,7 @@ export default function Header() {
 
       {/* Mobile Menu Dropdown */}
       <div 
-        className={`fixed inset-0 z-30 bg-black/60 backdrop-blur-sm transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-30 bg-black/60 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           isMobileMenuOpen ? "opacity-100 visible" : "opacity-0 invisible pointer-events-none"
         }`}
         onClick={() => setIsMobileMenuOpen(false)}

@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 
 const products = [
   {
@@ -32,7 +32,7 @@ const products = [
   }
 ];
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
     opacity: 1,
@@ -72,7 +72,7 @@ export default function Products() {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={cardVariants}
-              className="bg-white dark:bg-[#151f15] rounded-2xl overflow-hidden shadow-lg border border-black/5 dark:border-white/5 hover:shadow-2xl transition-all duration-300 flex flex-col group block"
+              className="bg-white dark:bg-[#151f15] rounded-2xl overflow-hidden shadow-lg border border-black/5 dark:border-white/5 hover:shadow-2xl transition-all duration-300 flex flex-col group"
             >
               <div className="relative h-56 sm:h-64 lg:h-52 w-full overflow-hidden">
                 <Image 

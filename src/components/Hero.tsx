@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const backgroundImages = [
   '/images/Birds.jpg',
@@ -47,19 +48,19 @@ export default function Hero() {
 
       {/* Hero Content */}
       <div className="relative z-20 text-center px-4 max-w-5xl mx-auto flex flex-col items-center">
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-[1.1] mb-6 animate-fade-in-up opacity-0 animation-delay-200">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight leading-[1.1] mb-6 animate-fade-in-up opacity-0 animation-delay-200">
           Cultivating <span className="text-transparent bg-clip-text bg-gradient-to-r from-farm-primary to-farm-light">Excellence</span> <br/> in Every Egg
         </h1>
         <p className="text-lg md:text-xl text-white/80 max-w-2xl mb-10 font-light leading-relaxed animate-fade-in-up opacity-0 animation-delay-400">
           Adefran Farms represents the pinnacle of modern agriculture. We combine generational expertise with sustainable practices to bring the finest, freshest produce directly to your table.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up opacity-0 animation-delay-600">
-          <button className="px-8 py-4 bg-farm-primary hover:bg-farm-hover text-white rounded-full font-semibold transition-all duration-300 shadow-[0_0_40px_rgba(45,90,39,0.4)] hover:shadow-[0_0_60px_rgba(45,90,39,0.7)] hover:-translate-y-1">
+        <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up opacity-0 animation-delay-600 w-full sm:w-auto px-4 sm:px-0">
+          <Link href="/#products" className="inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 bg-farm-primary hover:bg-farm-hover text-white rounded-full font-semibold transition-all duration-300 shadow-[0_0_40px_rgba(45,90,39,0.4)] hover:shadow-[0_0_60px_rgba(45,90,39,0.7)] hover:-translate-y-1">
             Explore Our Produce
-          </button>
-          <button className="px-8 py-4 bg-transparent hover:bg-white/10 text-white border border-white/30 rounded-full font-semibold transition-all duration-300 hover:border-white backdrop-blur-sm">
+          </Link>
+          <a href="/#about" className="inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 bg-transparent hover:bg-white/10 text-white border border-white/30 rounded-full font-semibold transition-all duration-300 hover:border-white backdrop-blur-sm">
             Discover Our Methods
-          </button>
+          </a>
         </div>
       </div>
 

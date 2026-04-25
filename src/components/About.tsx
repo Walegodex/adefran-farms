@@ -12,7 +12,7 @@ export default function About() {
         
         {/* Image Side */}
         <div className="w-full lg:w-1/2 relative">
-          <div className="relative h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl group border border-zinc-200 dark:border-zinc-800">
+          <div className="relative h-[350px] sm:h-[400px] md:h-[500px] w-full rounded-3xl overflow-hidden shadow-2xl group border border-zinc-200 dark:border-zinc-800">
             <Image
               src="/images/Birds.jpg"
               alt="Adefran Farms Poultry"
